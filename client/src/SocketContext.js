@@ -4,7 +4,7 @@ import Peer from 'simple-peer';
 
 const SocketContext = createContext();
 
-const socket = io('https://vca.netlify.app');
+const socket = io('https://vcabackend.herokuapp.com/');
 
 const ContextProvider = ({ children }) => {
     const [stream, setStream] = useState(null);
