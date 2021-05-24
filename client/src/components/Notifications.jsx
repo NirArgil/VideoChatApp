@@ -16,7 +16,7 @@ const Notifications = () => {
                     Answer Call
                 </Button>
             </div>
-        )};
+        )}
 
        </>
     )
