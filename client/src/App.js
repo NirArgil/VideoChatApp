@@ -1,6 +1,7 @@
 import React from 'react'
-import { Typography, AppBar } from '@material-ui/core'
+import { Typography, AppBar, Button } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
+import IMG from './img/a.jpg';
 
 //Components
 import VideoPlayer from './components/VideoPlayer'
@@ -30,7 +31,42 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         alignItems: 'center',
         width: '100%',
+        fontFamily: 'Lato',
     },
+    header: {
+        height: '700px ',
+        width: '1346px',
+        backgroundImage: `url(${IMG})`,
+        backgroundSize: 'cover',
+    },
+    H1: {
+        fontSize: '70px ',
+        marginLeft: '329px',
+        letterSpacing: '9px',
+        paddingTop: '250px',
+
+        [theme.breakpoints.down('xs')]: {
+            textAlign: 'center',
+        },
+
+    },
+    H2: {
+        fontSize: '50px ',
+        textAlign: 'center',
+        fontWeight: '300',
+        marginTop: '-10px',
+
+        [theme.breakpoints.down('xs')]: {
+            textAlign: 'right',
+        },
+    },
+
+    btn: {
+        [theme.breakpoints.down('xs')]: {
+           marginLeft: '450px',
+        },
+    }
+
 }));
 
 const App = () => {
@@ -39,16 +75,36 @@ const App = () => {
 
     return (
         <div className={classes.wrapper}>
-            <AppBar className={classes.appBar} position="static" color="inheirt">
-                <Typography variant="h2" align="center">Video Chat</Typography>
-            </AppBar>
 
-            <VideoPlayer />
-            <Options>
-                <Notifications />
-            </Options>
+            <section className={classes.header}>
+                <h1 className={classes.H1}>VCApp</h1>
+                <h2 className={classes.H2}>Meet the new video chat app.</h2>
+                <Typography align="center" className={classes.btn}>
+                    <Button 
+                    variant="outlined"
+                    color="primary"
+                     href="#chat">
+                    Get started </Button>
+                </Typography>
+                
+            </section>
 
+            <section id="chat"></section>
+            <div >
+                {/* <AppBar className={classes.appBar} position="static" color="inheirt">
+                <Typography variant="h2" align="center" fontFamily='Lato' >Video Chat</Typography>
+            </AppBar> */}
+
+                <VideoPlayer />
+                <Options>
+                    <Notifications />
+                </Options>
+
+            </div>
+
+            <section className="footer"></section>
         </div>
+
     )
 }
 
