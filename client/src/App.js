@@ -99,7 +99,7 @@ const App = () => {
                      href="#chat">
                     Get started </Button>
                 </Typography>
-                <video className={classes.video} src={VIDEO} muted loop autoPlay > </video>
+                <video className={classes.video} src={VIDEO} muted loop autoPlay playsInline > </video>
             </section>
 
             <section id="chat"></section>
