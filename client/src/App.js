@@ -1,7 +1,7 @@
 import React from 'react'
-import { Typography, AppBar, Button } from '@material-ui/core'
+import { Typography, Button } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
-import IMG from './img/a.jpg';
+// import IMG from './img/a.jpg';
 import VIDEO from './img/c.mp4';
 
 //Components
