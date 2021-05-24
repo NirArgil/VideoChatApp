@@ -2,6 +2,7 @@ import React from 'react'
 import { Typography, AppBar, Button } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import IMG from './img/a.jpg';
+import VIDEO from './img/c.mp4';
 
 //Components
 import VideoPlayer from './components/VideoPlayer'
@@ -34,16 +35,17 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Lato',
     },
     header: {
-        height: '700px ',
+        height: '840px ',
         width: '1346px',
-        backgroundImage: `url(${IMG})`,
-        backgroundSize: 'cover',
+        // backgroundImage: `url(${IMG})`,
+        // backgroundSize: 'cover',
     },
     H1: {
         fontSize: '70px ',
         marginLeft: '329px',
         letterSpacing: '9px',
         paddingTop: '250px',
+        zIndex: '2',
 
         [theme.breakpoints.down('xs')]: {
             textAlign: 'center',
@@ -55,6 +57,7 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         fontWeight: '300',
         marginTop: '-10px',
+        zIndex: '2',
 
         [theme.breakpoints.down('xs')]: {
             textAlign: 'right',
@@ -64,8 +67,18 @@ const useStyles = makeStyles((theme) => ({
     btn: {
         [theme.breakpoints.down('xs')]: {
            marginLeft: '450px',
+           zIndex: '2',
         },
-    }
+    },
+
+    video: {
+        width: '100%',
+        position: 'absolute',
+        minHeight: '700px',
+        top: '0',
+        zIndex: '-1',
+        objectFit: 'cover',
+    },
 
 }));
 
@@ -86,7 +99,7 @@ const App = () => {
                      href="#chat">
                     Get started </Button>
                 </Typography>
-                
+                <video className={classes.video} src={VIDEO} muted loop autoPlay > </video>
             </section>
 
             <section id="chat"></section>
