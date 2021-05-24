@@ -34,13 +34,6 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const Wrapper = styled.div`
-        display: 'flex';
-        flexDirection: 'column';
-        alignItems: 'center';
-        width: '100%';
-`
-
 const App = () => {
 
     const classes = useStyles();
