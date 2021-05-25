@@ -45,6 +45,11 @@ const useStyles = makeStyles((theme) => ({
         // backgroundImage: `url(${IMG})`,
         // backgroundSize: 'cover',
 
+        [theme.breakpoints.down('xs')]: {
+             width: '100%',
+        },
+        
+
     },
     p1: {
         fontSize: '70px ',
@@ -80,14 +85,21 @@ const useStyles = makeStyles((theme) => ({
     },
 
     img: {
-        width: '1340px',
-        height: 'auto',
+        width: '100%',
         position: 'absolute',
         minHeight: '700px',
         top: '0',
         zIndex: '-1',
         opacity: '0.7',
-        // objectFit: 'cover',
+        objectFit: 'cover',
+        
+        [theme.breakpoints.down('xs')]: {
+            objectFit: 'cover',
+            width: '100%',
+            // height:'auto',
+            minHeight: '100%',
+
+        },
     },
     chat: {
         marginTop: '180px',
@@ -151,8 +163,9 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute',
         width: '54px',
         top: '0',
-        marginTop: '21px',
-        marginLeft: '648px',
+       left: '50%',
+        // marginTop: '21px',
+        // marginLeft: '648px',
     },
 
     logoText: {
@@ -175,7 +188,7 @@ const App = () => {
 
     return (
 
-            <div className={classes.wrapper}>
+            <div id="header" className={classes.wrapper}>
                 <section className={classes.header}>
                     {/* <p data-aos="fade-down" className={classes.p1}>Welcome to</p> */}
                     <p data-aos="fade-right" className={classes.p1}>VCApp</p>
@@ -187,7 +200,7 @@ const App = () => {
                             href="#intro">
                             Get started </Button>
                     </Typography>
-                    <img src={IMG} className={classes.img} alt="HEADER"></img>
+                    {/* <img src={IMG} className={classes.img} alt="HEADER"></img> */}
                     <img src={LOGO} className={classes.logo} alt="LOGO"></img>
                     {/* <p className={classes.logoText}>VCApp</p> */}
                 </section>
