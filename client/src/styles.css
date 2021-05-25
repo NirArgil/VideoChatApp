@@ -14,12 +14,6 @@ body {
     font-family: 'Montserrat';
 }
 
-#header { 
-    background-image: url(./img/b.jpg);
-  background-size: cover;
-  height: 790px;
-}
-
 * {
     margin: 0;
     padding: 0;

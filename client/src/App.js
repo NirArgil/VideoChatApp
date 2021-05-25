@@ -40,14 +40,16 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Montserrat',
     },
     header: {
-        height: '680px ',
-        width: '1340px',
-        // backgroundImage: `url(${IMG})`,
-        // backgroundSize: 'cover',
+        height: '950px ',
+        width: '100%',
+        backgroundImage: `url(${IMG})`,
+        backgroundSize: 'cover',
 
-        [theme.breakpoints.down('xs')]: {
-             width: '100%',
-        },
+        // [theme.breakpoints.down('xs')]: {
+        //     backgroundSize: 'cover',
+        //     width: '100%',
+           
+        // },
         
 
     },
@@ -87,7 +89,7 @@ const useStyles = makeStyles((theme) => ({
     img: {
         width: '100%',
         position: 'absolute',
-        minHeight: '700px',
+        minHeight: '900px',
         top: '0',
         zIndex: '-1',
         opacity: '0.7',
