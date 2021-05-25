@@ -33,24 +33,12 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: '15px',
     },
     wrapper: {
-        // display: 'flex',
-        // flexDirection: 'column',
-        // alignItems: 'center',
-        // width: '100%',
         fontFamily: 'Montserrat',
+
     },
     header: {
         height: '950px ',
-        width: '100%',
-        backgroundImage: `url(${IMG})`,
         backgroundSize: 'cover',
-
-        // [theme.breakpoints.down('xs')]: {
-        //     backgroundSize: 'cover',
-        //     width: '100%',
-           
-        // },
-        
 
     },
     p1: {
@@ -89,39 +77,33 @@ const useStyles = makeStyles((theme) => ({
     img: {
         width: '100%',
         position: 'absolute',
-        minHeight: '900px',
+        height: '950px',
         top: '0',
         zIndex: '-1',
         opacity: '0.7',
         objectFit: 'cover',
-        
-        [theme.breakpoints.down('xs')]: {
-            objectFit: 'cover',
-            width: '100%',
-            // height:'auto',
-            minHeight: '100%',
 
+        [theme.breakpoints.down('xs')]: {
         },
     },
     chat: {
         marginTop: '180px',
         height: '810px ',
-         display: 'flex',
+        display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         width: '100%',
     },
     intro: {
-        marginTop: '126px',
+        width: '100%',
         paddingTop: '100px',
-        height: '570px ',
+        height: '610px ',
         display: 'flex',
         backgroundColor: 'green',
 
         [theme.breakpoints.down('xs')]: {
-            width: '700px'
+            paddingTop: '90px',
         },
-
     },
     intro1: {
         fontSize: '36px',
@@ -131,8 +113,10 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 'bold',
 
         [theme.breakpoints.down('xs')]: {
-            fontSize: '14px',
-            width: '140px',
+            fontSize: '18px',
+            width: '48%',
+            marginLeft: '1px',
+            marginTop: '160px',
         },
     },
 
@@ -142,8 +126,14 @@ const useStyles = makeStyles((theme) => ({
             display: 'block',
             marginLeft: '30px',
             width: '50%',
-            borderBottom: '2px solid #1a252f',
+            borderBottom: '2px solid black',
             paddingTop: '10px',
+
+            [theme.breakpoints.down('xs')]: {
+                width: '50px',
+                marginLeft: '10px',
+                paddingTop: '3px',
+            },
 
         }
     },
@@ -157,17 +147,21 @@ const useStyles = makeStyles((theme) => ({
 
         [theme.breakpoints.down('xs')]: {
             fontSize: '14px',
-            width: '300px',
-            lineHeight: '21px',
+            width: '100%',
+            lineHeight: '23px',
+            marginLeft: '0px',
         },
     },
     logo: {
         position: 'absolute',
         width: '54px',
         top: '0',
-       left: '50%',
-        // marginTop: '21px',
-        // marginLeft: '648px',
+        marginTop: '23px',
+        marginLeft: '48%',
+
+        [theme.breakpoints.down('xs')]: {
+            marginLeft: '43%',
+        },
     },
 
     logoText: {
@@ -190,26 +184,26 @@ const App = () => {
 
     return (
 
-            <div id="header" className={classes.wrapper}>
-                <section className={classes.header}>
-                    {/* <p data-aos="fade-down" className={classes.p1}>Welcome to</p> */}
-                    <p data-aos="fade-right" className={classes.p1}>VCApp</p>
-                    <p data-aos="fade-left" className={classes.p2}>It's time to meet <br /> the new video chat app.</p>
-                    <Typography align="center" className={classes.btn}>
-                        <Button
-                            variant="outlined"
-                            color="primary"
-                            href="#intro">
-                            Get started </Button>
-                    </Typography>
-                    {/* <img src={IMG} className={classes.img} alt="HEADER"></img> */}
-                    <img src={LOGO} className={classes.logo} alt="LOGO"></img>
-                    {/* <p className={classes.logoText}>VCApp</p> */}
-                </section>
-           
+        <div className={classes.wrapper}>
+            <section className={classes.header}>
+                {/* <p data-aos="fade-down" className={classes.p1}>Welcome to</p> */}
+                <p data-aos="fade-right" className={classes.p1}>VCApp</p>
+                <p data-aos="fade-left" className={classes.p2}>It's time to meet <br /> the new video chat app.</p>
+                <Typography align="center" className={classes.btn}>
+                    <Button
+                        variant="outlined"
+                        color="primary"
+                        href="#intro">
+                        Get started </Button>
+                </Typography>
+                <img src={IMG} className={classes.img} alt="HEADER"></img>
+                <img src={LOGO} className={classes.logo} alt="LOGO"></img>
+                {/* <p className={classes.logoText}>VCApp</p> */}
+            </section>
+
 
             <section id="intro" className={classes.intro}>
-                <div data-aos="fade-right"  className={classes.intro1}>
+                <div data-aos="fade-right" className={classes.intro1}>
                     <p className={classes.firstp} > About VCApp</p>
                 </div>
 
@@ -218,8 +212,8 @@ const App = () => {
                         A lot of the business, work and social life moved online. <br />
                         So i built an app that deliever a good solution for this issue. <br />
 
-                        New video chat application that provide a platform to meet by video for 2 participants. <br /> <br/>
-                       <b> How It Works? </b><br/>
+                        New video chat application that provide a platform to meet by video for 2 participants. <br /> <br />
+                        <b> How It Works? </b><br />
                         You just need to
                         enter your name, <br />
                         Press on "Copy Your ID", <br />
@@ -247,7 +241,6 @@ const App = () => {
             <section className="footer"></section>
 
         </div>
-
     )
 }
 
