@@ -1,8 +1,13 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Typography, Button } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
-// import IMG from './img/a.jpg';
-import VIDEO from './img/c.mp4';
+import IMG from './img/b.jpg';
+import LOGO from './img/L3.png';
+// import VIDEO from './img/c.mp4';
+
+//AOS
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 //Components
 import VideoPlayer from './components/VideoPlayer'
@@ -32,88 +37,117 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         alignItems: 'center',
         width: '100%',
-        fontFamily: 'Lato',
+        fontFamily: 'Montserrat',
     },
     header: {
-        height: '840px ',
-        width: '1346px',
+        height: '680px ',
+        width: '1340px',
         // backgroundImage: `url(${IMG})`,
-        // backgroundSize: 'cover',
+        backgroundSize: 'cover',
+
     },
-    H1: {
+    p1: {
         fontSize: '70px ',
-        marginLeft: '329px',
-        letterSpacing: '9px',
-        paddingTop: '250px',
+        textAlign: 'center',
+        // marginLeft: '329px',
+        letterSpacing: '3px',
+        paddingTop: '160px',
         zIndex: '2',
+        fontWeight: 'bold',
 
         [theme.breakpoints.down('xs')]: {
             textAlign: 'center',
         },
 
     },
-    H2: {
-        fontSize: '50px ',
+    p2: {
+        fontSize: '41px ',
         textAlign: 'center',
         fontWeight: '300',
         marginTop: '-10px',
         zIndex: '2',
-
+        
         [theme.breakpoints.down('xs')]: {
-            textAlign: 'right',
+            textAlign: 'center',
         },
     },
 
     btn: {
+        marginTop: '14px',
         [theme.breakpoints.down('xs')]: {
-           marginLeft: '450px',
-           zIndex: '2',
+            // marginLeft: '450px',
+            zIndex: '2',
         },
     },
 
-    video: {
-        width: '100%',
+    img: {
+        width: '1340px',
         position: 'absolute',
         minHeight: '700px',
         top: '0',
         zIndex: '-1',
-        objectFit: 'cover',
+        opacity: '0.7',
+        // objectFit: 'cover',
     },
+    chat: {
+     marginTop: '180px'
+    },
+    logo: {
+        position: 'absolute',
+        width: '54px',
+        top: '0',
+        marginTop: '21px',
+        marginLeft: '648px',
+       },
 
+       logoText: {
+        position: 'absolute',
+        fontSize: '21px',
+        top: '0',
+        marginTop: '36px',
+        marginLeft: '700px',
+        letterSpacing: '-1px',
+       },
 }));
 
 const App = () => {
 
+    useEffect(() => {
+        AOS.init();
+      });
+
     const classes = useStyles();
 
     return (
+        
         <div className={classes.wrapper}>
 
             <section className={classes.header}>
-                <h1 className={classes.H1}>VCApp</h1>
-                <h2 className={classes.H2}>Meet the new video chat app.</h2>
+                {/* <p data-aos="fade-down" className={classes.p1}>Welcome to</p> */}
+                <p data-aos="fade-right" className={classes.p1}>VCApp</p>
+                <p data-aos="fade-left" className={classes.p2}>It's time to meet <br/> the new video chat app.</p>
                 <Typography align="center" className={classes.btn}>
-                    <Button 
-                    variant="outlined"
-                    color="primary"
-                     href="#chat">
-                    Get started </Button>
+                    <Button
+                        variant="outlined"
+                        color="primary"
+                        href="#chat">
+                        Get started </Button>
                 </Typography>
-                <video className={classes.video} src={VIDEO} muted loop preload="yes" autoPlay  > </video>
+                <img src={IMG} className={classes.img}></img>
+                <img src={LOGO} className={classes.logo}></img>
+                {/* <p className={classes.logoText}>VCApp</p> */}
             </section>
 
-            <section id="chat"></section>
-            <div >
-                {/* <AppBar className={classes.appBar} position="static" color="inheirt">
-                <Typography variant="h2" align="center" fontFamily='Lato' >Video Chat</Typography>
-            </AppBar> */}
-
+            <section id="chat" className={classes.chat}>
                 <VideoPlayer />
                 <Options>
                     <Notifications />
                 </Options>
+            </section>
 
-            </div>
+            {/* <AppBar className={classes.appBar} position="static" color="inheirt">
+                <Typography variant="h2" align="center" fontFamily='Lato' >Video Chat</Typography>
+            </AppBar> */}
 
             <section className="footer"></section>
         </div>
