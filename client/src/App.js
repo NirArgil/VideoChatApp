@@ -92,6 +92,10 @@ const useStyles = makeStyles((theme) => ({
     chat: {
         marginTop: '180px',
         height: '810px ',
+         display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        width: '100%',
     },
     intro: {
         marginTop: '126px',
