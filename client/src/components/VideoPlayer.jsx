@@ -38,13 +38,6 @@ const useStyles = makeStyles((theme) => ({
         },
     },
 
-    video2: {
-        width: '550px',
-        [theme.breakpoints.down('xs')]: {
-            width: '410px',
-        },
-    },
-    
     gridContainer: {
         justifyContent: 'center',
         position: 'relative',
@@ -57,6 +50,7 @@ const useStyles = makeStyles((theme) => ({
         padding: '5px',
         border: '2px solid black',
         margin: '10px',
+        width: '90%',
     },
 }));
 
