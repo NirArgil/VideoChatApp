@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
         opacity: '0.7',
         objectFit: 'cover',
 
-       
+
     },
     chat: {
         paddingTop: '180px',
@@ -163,7 +163,7 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute',
         marginTop: '140px',
         marginLeft: '70px',
-        
+
         [theme.breakpoints.down('xs')]: {
             width: '210px',
             marginTop: '410px',
@@ -189,7 +189,7 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute',
         marginTop: '140px',
         marginLeft: '300px',
-        
+
         [theme.breakpoints.down('xs')]: {
             width: '90px',
             marginTop: '394px',
@@ -291,6 +291,12 @@ const App = () => {
                 </Typography>
                 {/* <img src={IMG} className={classes.img} alt="HEADER"></img> */}
                 <img src={LOGO} className={classes.logo} alt="LOGO"></img>
+
+                <div>
+                    <a href="https://wa.me/" class="float" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp my-float"></i>
+                    </a>
+                </div>
 
             </section>
 
