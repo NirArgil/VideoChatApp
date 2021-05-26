@@ -87,19 +87,22 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     chat: {
-        marginTop: '180px',
+        marginTop: '50px',
+        paddingTop: '180px',
         height: '810px ',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         width: '100%',
+        // backgroundColor: '#0a1931',
     },
     intro: {
         width: '100%',
         paddingTop: '100px',
         height: '610px ',
         display: 'flex',
-        backgroundColor: 'green',
+        // color: 'white',
+        // backgroundColor: 'white',
 
         [theme.breakpoints.down('xs')]: {
             paddingTop: '90px',
@@ -158,6 +161,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '70px',
         marginTop: '480px',
         left: '50%',
+        fontWeight: '100',
 
      },
 
@@ -210,7 +214,7 @@ const App = () => {
                         href="#intro">
                         Get started </Button>
                 </Typography>
-                <img src={IMG} className={classes.img} alt="HEADER"></img>
+                {/* <img src={IMG} className={classes.img} alt="HEADER"></img> */}
                 <img src={LOGO} className={classes.logo} alt="LOGO"></img>
                 {/* <p className={classes.logoText}>VCApp</p> */}
             </section>
