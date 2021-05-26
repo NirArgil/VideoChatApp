@@ -2,18 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 html {
- scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-    height: 2500px;
-    background-image: url(./img/1.png) !important;
+    min-height: 2500px;
+    background-image: url(./img/1.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
-   background-size: cover; 
+    background-size: cover;
     font-family: 'Montserrat';
 
 }
+
 /* 
 #header {
     background-image: url(./img/b.jpg);

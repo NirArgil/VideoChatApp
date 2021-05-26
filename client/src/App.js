@@ -40,8 +40,6 @@ const useStyles = makeStyles((theme) => ({
     },
     header: {
         height: '950px ',
-        backgroundSize: 'cover',
-
     },
     p1: {
         fontSize: '70px ',
@@ -90,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
     chat: {
         paddingTop: '180px',
         paddingBottom: '100px',
-        height: '810px ',
+        minHeight: '810px ',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -344,7 +342,7 @@ const App = () => {
 
                 <span>
                     <a className={classes.socialIcons} href="https://www.linkedin.com/in/nir-argil-158815185/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-                    <a className={classes.socialIcons} href="https://github.com/NirArgil/FinanceGuard" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                    <a className={classes.socialIcons} href="https://github.com/NirArgil/VideoChatApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                 </span>
 
                 <p className={classes.copyright} >Copyright © NirArgil 2021.</p>
