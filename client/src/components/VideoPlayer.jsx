@@ -6,7 +6,7 @@ import { SocketContext } from '../SocketContext';
 
 const useStyles = makeStyles((theme) => ({
     PaperVideoCallmyVideo: {
-        padding: '3px',
+        padding: '1px',
         border: '2px solid black',
         position: 'absolute',
         right: '45%',
@@ -14,14 +14,17 @@ const useStyles = makeStyles((theme) => ({
 
         [theme.breakpoints.down('xs')]: {
             right: '30%',
-            bottom: '100%'
+            bottom: '99%'
         },
 
 
     },
     VideoCallMyVideo: {
         width: '150px',
-
+        [theme.breakpoints.down('xs')]: {
+            width: '100px',
+            
+        },
     },
 
     VideoCallUserVideo: {
@@ -50,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
         padding: '5px',
         border: '2px solid black',
         margin: '10px',
-        width: '90%',
+
     },
 }));
 
