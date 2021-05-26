@@ -84,7 +84,7 @@ const VideoPlayer = () => {
                 <Paper className={classes.paper}>
                     <Grid>
                         <Typography varient="h5" gutterBottom> {call.name || 'Name'} </Typography>
-                        <video playsInline ref={userVideo} muted autoPlay className={classes.VideoCallUserVideo} />
+                        <video playsInline ref={userVideo} autoPlay className={classes.VideoCallUserVideo} />
                     </Grid>
                 </Paper>
 
