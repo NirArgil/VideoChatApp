@@ -7,6 +7,7 @@ import { Assignment, Phone, PhoneDisabled } from '@material-ui/icons';
 import { SocketContext } from '../SocketContext';
 
 const useStyles = makeStyles((theme) => ({
+
     root: {
         display: 'flex',
         flexDirection: 'column',
@@ -21,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
         width: '600px',
         margin: '35px 0',
         padding: 0,
+
         [theme.breakpoints.down('xs')]: {
             width: '80%',
         },
@@ -51,7 +53,7 @@ const Options = ({ children }) => {
                             <Typography gutterBottom varient="h6"> Acount Info </Typography>
                             <TextField label="Name" value={name} onChange={(e) => setName(e.target.value)} fullWidth />
                             <CopyToClipboard text={me} className={classes.margin}>
-                                <Button variant="contained" color="primary" fullWidth startIcon={<Assignment fontSize="large" />}>
+                                <Button className={classes.ButtonOpt} variant="contained" color="primary" fullWidth startIcon={<Assignment fontSize="large" />}>
                                     Copy Your ID
                                </Button>
                             </CopyToClipboard>

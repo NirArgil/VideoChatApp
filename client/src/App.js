@@ -3,6 +3,10 @@ import { Typography, Button } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import IMG from './img/b.jpg';
 import LOGO from './img/L3.png';
+import IntroImg1 from './img/q.png';
+import IntroImg2 from './img/t.png';
+import IntroImg3 from './img/v.png';
+
 // import VIDEO from './img/c.mp4';
 
 //AOS
@@ -83,35 +87,37 @@ const useStyles = makeStyles((theme) => ({
         opacity: '0.7',
         objectFit: 'cover',
 
-        [theme.breakpoints.down('xs')]: {
-        },
+       
     },
     chat: {
-        marginTop: '50px',
         paddingTop: '180px',
+        paddingBottom: '100px',
         height: '810px ',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         width: '100%',
-        // backgroundColor: '#0a1931',
+        background: 'rgba(35, 41, 49, 0.75)',
+
     },
+
     intro: {
         width: '100%',
         paddingTop: '100px',
         height: '610px ',
         display: 'flex',
         // color: 'white',
-        // backgroundColor: 'white',
+        backgroundColor: 'white',
 
         [theme.breakpoints.down('xs')]: {
-            paddingTop: '90px',
+            paddingTop: '30px',
+            height: '700px ',
         },
     },
     intro1: {
         fontSize: '36px',
-        marginLeft: '90px',
-        marginTop: '90px',
+        marginLeft: '100px',
+        marginTop: '50px',
         width: '300px',
         fontWeight: 'bold',
 
@@ -156,32 +162,105 @@ const useStyles = makeStyles((theme) => ({
         },
     },
 
+    IntroImg1: {
+        width: '300px',
+        position: 'absolute',
+        marginTop: '140px',
+        marginLeft: '70px',
+        
+        [theme.breakpoints.down('xs')]: {
+            width: '210px',
+            marginTop: '410px',
+            marginLeft: '10px'
+        },
+    },
+
+    IntroImg2: {
+        width: '300px',
+        position: 'absolute',
+        marginTop: '160px',
+        marginLeft: '340px',
+
+        [theme.breakpoints.down('xs')]: {
+            width: '210px',
+            marginTop: '410px',
+            marginLeft: '160px'
+        },
+    },
+
+    IntroImg3: {
+        width: '100px',
+        position: 'absolute',
+        marginTop: '140px',
+        marginLeft: '300px',
+        
+        [theme.breakpoints.down('xs')]: {
+            width: '90px',
+            marginTop: '394px',
+            marginLeft: '160px'
+        },
+    },
+
+    footer: {
+        background: 'rgba(35, 41, 49, 0.9)',
+        borderTop: '1px solid #687980',
+        height: '90px',
+        textAlign: 'center',
+        width: '100%',
+        paddingTop: '30px'
+    },
+
+    socialIcons: {
+        color: '#c0c0c0',
+        fontSize: '39px',
+        marginLeft: '25px',
+
+        '&:hover': {
+            color: 'white',
+        }
+    },
+
+    copyright: {
+        color: '#c0c0c0',
+        fontSize: '18px'
+    },
+
+    vectorAtr: {
+        fontSize: '10px',
+        color: '#c0c0c0',
+        textDecoration: 'none'
+    },
+
     arrowDown: {
         position: 'absolute',
-        fontSize: '70px',
+        fontSize: '50px',
         marginTop: '480px',
-        left: '50%',
+        left: '48%',
         fontWeight: '100',
 
-     },
+        [theme.breakpoints.down('xs')]: {
+            marginTop: '630px',
+        },
 
-     a: {
+    },
+
+    a: {
         color: 'inherit',
-     },
+    },
 
     logo: {
         position: 'absolute',
         width: '54px',
         top: '0',
-        marginTop: '23px',
+        marginTop: '28px',
         marginLeft: '48%',
 
         [theme.breakpoints.down('xs')]: {
             marginLeft: '43%',
         },
     },
-    
-   
+
+
     logoText: {
         position: 'absolute',
         fontSize: '21px',
@@ -225,6 +304,10 @@ const App = () => {
                     <p className={classes.firstp} > About VCApp</p>
                 </div>
 
+                <img data-aos="fade-down" src={IntroImg1} className={classes.IntroImg1} alt="videoChat"></img>
+                <img data-aos="fade-down" src={IntroImg2} className={classes.IntroImg2} alt="videoChat"></img>
+                <img data-aos="fade-down" src={IntroImg3} className={classes.IntroImg3} alt="videoChat"></img>
+
                 <div data-aos="fade-up" className={classes.intro2}>
                     <p>
                         A lot of the business, work and social life moved online. <br />
@@ -243,9 +326,9 @@ const App = () => {
                 </div>
 
                 <div className={classes.arrowDown}>
-                  <a className={classes.a} href="#chat">  <i class="fas fa-chevron-down"></i> </a>
+                    <a className={classes.a} href="#chat">  <i class="fas fa-chevron-down"></i> </a>
                 </div>
-                
+
             </section>
 
             <section id="chat" className={classes.chat}>
@@ -259,7 +342,16 @@ const App = () => {
                 <Typography variant="h2" align="center" fontFamily='Lato' >Video Chat</Typography>
             </AppBar> */}
 
-            <section className="footer"></section>
+            <section className={classes.footer}>
+
+                <span>
+                    <a className={classes.socialIcons} href="https://www.linkedin.com/in/nir-argil-158815185/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    <a className={classes.socialIcons} href="https://github.com/NirArgil/FinanceGuard" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                </span>
+
+                <p className={classes.copyright} >Copyright © NirArgil 2021.</p>
+                <a className={classes.vectorAtr} href="https://www.vecteezy.com/free-vector/web">Web Vectors by Vecteezy</a>
+            </section>
 
         </div>
     )
