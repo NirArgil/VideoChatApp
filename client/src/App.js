@@ -152,6 +152,19 @@ const useStyles = makeStyles((theme) => ({
             marginLeft: '0px',
         },
     },
+
+    arrowDown: {
+        position: 'absolute',
+        fontSize: '70px',
+        marginTop: '480px',
+        left: '50%',
+
+     },
+
+     a: {
+        color: 'inherit',
+     },
+
     logo: {
         position: 'absolute',
         width: '54px',
@@ -163,7 +176,8 @@ const useStyles = makeStyles((theme) => ({
             marginLeft: '43%',
         },
     },
-
+    
+   
     logoText: {
         position: 'absolute',
         fontSize: '21px',
@@ -224,7 +238,10 @@ const App = () => {
                     </p>
                 </div>
 
-
+                <div className={classes.arrowDown}>
+                  <a className={classes.a} href="#chat">  <i class="fas fa-chevron-down"></i> </a>
+                </div>
+                
             </section>
 
             <section id="chat" className={classes.chat}>
