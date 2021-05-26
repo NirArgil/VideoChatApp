@@ -1,13 +1,11 @@
 import React, { useEffect } from 'react'
 import { Typography, Button } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
-import IMG from './img/b.jpg';
+
 import LOGO from './img/L3.png';
 import IntroImg1 from './img/q.png';
 import IntroImg2 from './img/t.png';
 import IntroImg3 from './img/v.png';
-
-// import VIDEO from './img/c.mp4';
 
 //AOS
 import AOS from 'aos';
@@ -295,7 +293,7 @@ const App = () => {
                 </Typography>
                 {/* <img src={IMG} className={classes.img} alt="HEADER"></img> */}
                 <img src={LOGO} className={classes.logo} alt="LOGO"></img>
-                {/* <p className={classes.logoText}>VCApp</p> */}
+
             </section>
 
 
